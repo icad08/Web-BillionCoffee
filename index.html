@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billion Coffee | A Better Way to Experience</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#0a0a0a',
+                        card: '#141414',
+                        borderDark: '#262626',
+                        gold: '#DFB163',
+                        goldHover: '#c79c50',
+                        textGray: '#a3a3a3',
+                        textLight: '#f5f5f5',
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0a0a0a; color: #f5f5f5; }
+        /* Custom scrollbar for dark theme */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #262626; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #DFB163; }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-gold selection:text-background relative">
+
+    <!-- Glow Background Effect (Subtle) -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+    <!-- Navbar -->
+    <nav class="fixed w-full bg-background/80 backdrop-blur-lg z-50 border-b border-borderDark transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-center h-24">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3">
+                    <div class="w-10 h-10 border border-gold/50 rounded-lg flex items-center justify-center">
+                        <i class="fa-solid fa-mug-hot text-gold text-lg"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold tracking-widest text-textLight uppercase">Billion</span>
+                        <span class="text-[10px] tracking-[0.2em] text-textGray uppercase">Coffee System</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#home" class="text-textGray hover:text-gold text-sm font-medium transition-colors">Beranda</a>
+                    <a href="#menu" class="text-textGray hover:text-gold text-sm font-medium transition-colors">Menu</a>
+                    <a href="#about" class="text-textGray hover:text-gold text-sm font-medium transition-colors">Tentang</a>
+                    <a href="#reviews" class="text-textGray hover:text-gold text-sm font-medium transition-colors">Ulasan</a>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="https://api.whatsapp.com/send?phone=6282220651924" target="_blank" class="bg-gold hover:bg-goldHover text-background px-6 py-2.5 rounded-md font-semibold text-sm transition-all flex items-center gap-2">
+                        WhatsApp <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-textLight text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-card border-t border-borderDark absolute w-full shadow-2xl">
+            <div class="px-6 pt-4 pb-6 space-y-4 flex flex-col">
+                <a href="#home" class="text-textGray hover:text-gold font-medium">Beranda</a>
+                <a href="#menu" class="text-textGray hover:text-gold font-medium">Menu</a>
+                <a href="#about" class="text-textGray hover:text-gold font-medium">Tentang</a>
+                <a href="#reviews" class="text-textGray hover:text-gold font-medium">Ulasan</a>
+                <a href="https://api.whatsapp.com/send?phone=6282220651924" target="_blank" class="bg-gold text-background px-4 py-3 rounded-md font-semibold text-center mt-4">
+                    Pesan Sekarang
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-40 pb-20 lg:pt-48 lg:pb-32 px-6 lg:px-12 max-w-7xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
+        <!-- Text Content -->
+        <div class="flex-1 text-left w-full z-10">
+            <h1 class="font-serif text-5xl lg:text-7xl text-textLight leading-[1.1] mb-6">
+                A Better Way <br>
+                To Experience <br>
+                <span class="text-gold">Billion Coffee.</span>
+            </h1>
+            <p class="text-textGray text-base md:text-lg mb-10 max-w-lg leading-relaxed">
+                Pengalaman coffee yang lebih praktis. Kedai kopi estetik di Tamantirto yang siap menemani obrolan santai hingga tugas larut malammu.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-start gap-6">
+                <a href="https://api.whatsapp.com/send?phone=6282220651924" target="_blank" class="bg-gold text-background px-8 py-3.5 rounded-md font-semibold hover:bg-goldHover transition-colors flex items-center gap-3">
+                    Pesan Sekarang <i class="fa-solid fa-arrow-right text-sm"></i>
+                </a>
+                <a href="#menu" class="px-2 py-3.5 text-textLight hover:text-gold font-medium transition-colors flex items-center gap-3 group">
+                    Jelajahi Menu <i class="fa-solid fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <div class="mt-12 flex items-center gap-4">
+                <div class="w-8 h-8 rounded-md border border-borderDark flex items-center justify-center bg-card">
+                    <i class="fa-solid fa-check text-gold text-xs"></i>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold text-textLight">Buka Setiap Hari</h4>
+                    <p class="text-xs text-textGray">Tutup hingga pukul 01.00 WIB</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Billion Coffee Interior -->
+        <div class="flex-1 w-full h-[400px] lg:h-[500px] rounded-2xl overflow-hidden border border-borderDark shadow-2xl">
+            <img src="billion-coffee-interior.png" alt="Interior Billion Coffee dengan area duduk dan mural" class="w-full h-full object-cover">
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 py-10">
+        <div class="flex items-center justify-center gap-6 text-[10px] sm:text-xs tracking-[0.2em] text-textGray font-semibold uppercase">
+            <span class="opacity-50">Designed for Better Service</span>
+            <div class="h-px w-12 sm:w-24 bg-borderDark"></div>
+            <span class="opacity-50 text-gold">Tamantirto, Bantul</span>
+        </div>
+    </div>
+
+    <!-- About Section (Matching Image style) -->
+    <section id="about" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row gap-16">
+            <div class="flex-1">
+                <span class="text-gold text-xs font-bold tracking-widest uppercase mb-4 block">About The Project</span>
+                <h2 class="font-serif text-4xl lg:text-5xl text-textLight leading-tight mb-8">
+                    More than just <br>a coffee shop.
+                </h2>
+                <div class="flex items-center gap-4">
+                    <div class="text-4xl text-gold"><i class="fa-solid fa-quote-left"></i></div>
+                    <p class="text-textGray italic">Tempatnya asik banget buat nongkrong sore sampai malam. Kopi enak, stopkontak aman buat nugas.</p>
+                </div>
+            </div>
+            <div class="flex-1 text-textGray space-y-6 leading-relaxed">
+                <p>Billion Coffee merupakan ruang nyaman yang dikembangkan untuk mendukung aktivitas santai maupun produktif Anda melalui atmosfer yang tenang dan terintegrasi.</p>
+                <p>Sistem kami mendukung pengalaman pengunjung dengan fasilitas lengkap, mulai dari dine-in dengan AC, area outdoor yang cozy, drive-through yang praktis, hingga akses Wi-Fi kencang untuk menunjang pekerjaan Anda hingga pukul 01.00 dini hari.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section (Dark Cards) -->
+    <section id="menu" class="py-20 border-t border-borderDark">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-gold text-xs font-bold tracking-widest uppercase mb-2 block">Our Signature</span>
+                    <h2 class="font-serif text-3xl md:text-4xl text-textLight">Menu Favorit</h2>
+                </div>
+                <div class="text-right hidden sm:block">
+                    <p class="text-textGray text-sm">Mulai dari Rp 25.000</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Menu 1 -->
+                <div class="bg-card border border-borderDark rounded-xl p-6 hover:border-gold/50 transition-colors group">
+                    <div class="w-full h-48 bg-[#1a1a1a] rounded-lg mb-6 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&q=80&w=800" alt="Es Kopi Susu" class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-semibold text-textLight">Es Kopi Susu Billion</h3>
+                    </div>
+                    <p class="text-textGray text-sm">Creamy, balanced espresso dengan sentuhan gula aren autentik yang pas di lidah.</p>
+                </div>
+
+                <!-- Menu 2 -->
+                <div class="bg-card border border-borderDark rounded-xl p-6 hover:border-gold/50 transition-colors group">
+                    <div class="w-full h-48 bg-[#1a1a1a] rounded-lg mb-6 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1610889556528-9a770e32642f?auto=format&fit=crop&q=80&w=800" alt="Espresso Tonic" class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-semibold text-textLight">Espresso Tonic</h3>
+                    </div>
+                    <p class="text-textGray text-sm">Paduan espresso berkualitas dengan air tonik bersoda dan sentuhan citrusy.</p>
+                </div>
+
+                <!-- Menu 3 -->
+                <div class="bg-card border border-borderDark rounded-xl p-6 hover:border-gold/50 transition-colors group">
+                    <div class="w-full h-48 bg-[#1a1a1a] rounded-lg mb-6 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&q=80&w=800" alt="Artisan Pastry" class="w-full h-full object-cover opacity-80 group-hover:scale-105 group-hover:opacity-100 transition-all duration-500">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-lg font-semibold text-textLight">Pastry & Snacks</h3>
+                    </div>
+                    <p class="text-textGray text-sm">Teman ngopi ideal mulai dari croissant buttery hingga camilan gurih.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="https://linktr.ee/billion_coffee?utm_source=linktree_profile_share&amp;ltsid=07ea0132-da82-4ce7-954b-d4f1881e1025" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md border border-gold/50 px-6 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold hover:text-background">
+                    More Menu <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-card border-t border-borderDark pt-20 pb-10 mt-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16">
+                <!-- Info -->
+                <div>
+                    <a href="#" class="flex items-center gap-3 mb-6">
+                        <div class="w-8 h-8 bg-gold text-background rounded flex items-center justify-center">
+                            <i class="fa-solid fa-mug-hot text-sm"></i>
+                        </div>
+                        <span class="text-lg font-bold tracking-widest text-textLight uppercase">Billion Coffee</span>
+                    </a>
+                    <p class="text-textGray mb-8 text-sm max-w-sm">Tempat singgah terbaik untuk kopi berkualitas dan waktu berkualitas di Kasihan, Bantul.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i class="fa-solid fa-location-dot mt-1 text-gold"></i>
+                            <p class="text-textGray text-sm leading-relaxed">
+                                Jl. Gatak, Brajan, Tamantirto, Kec. Kasihan,<br>
+                                Kabupaten Bantul, DIY 55184
+                            </p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-clock text-gold"></i>
+                            <p class="text-textGray text-sm">Buka Setiap Hari | Tutup 01.00 WIB</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-phone text-gold"></i>
+                            <p class="text-textGray text-sm">0822-2065-1924</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="h-64 lg:h-full min-h-[250px] rounded-xl overflow-hidden border border-borderDark relative grayscale contrast-125 opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Billioncoffee%20Tamantirto%20Bantul&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        class="absolute inset-0">
+                    </iframe>
+                </div>
+            </div>
+
+            <div class="border-t border-borderDark pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-textGray">
+                <p>&copy; 2026 Billion Coffee System. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <span class="opacity-50">4.8 / 5.0 (216+ Reviews)</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for Mobile Menu -->
+    <script>
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
